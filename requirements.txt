@@ -1,4 +1,5 @@
 fastapi
 ipykernel
 pydantic
--e .
+pandas
+langchain_core
