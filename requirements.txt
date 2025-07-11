@@ -3,3 +3,6 @@ ipykernel
 pydantic
 pandas
 langchain_core
+langchain_groq
+python-dotenv
+langchain_openai
