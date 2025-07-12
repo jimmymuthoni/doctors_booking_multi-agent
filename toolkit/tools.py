@@ -52,6 +52,28 @@ def check_availability_by_specialization(desired_date: Datemodel, specialization
     return output
 
 
+#function to make an appointment
+@tool
+def set_appointment(desired_date:DateTimeModel, id_number:IdentificationNumberModel, doctor_name:Literal['kevin anderson','robert martinez','susan davis','daniel miller','sarah wilson','michael green','lisa brown','jane smith','emily johnson','john doe']):
+    """
+    set apponintment or slot with the doctor.
+    the parameters MUST be provided by the user in the query.
+    """
+    df = pd.read_csv("/home/brian/Documents/JIM/Doctor Appointment Multiagent/data/doctor_availability.csv")
+    from datetime import datetime
+    def convert_datetime_format(dt_str):
+        dt = datetime.strptime(dt_str, "%d-%m-%Y %H:%M")
+        return dt.strftime("%d-%m-%Y %#H.%M")
+    case = df[(df['date_slot'] == convert_datetime_format(desired_date.date))&(df['doctor_name'] == doctor_name)&(df['is_available'] == True)]
+    if len(case) == 0:
+        return "No available appointments for that particular case."
+    else:
+        df.loc[(df['date_slot'] == convert_datetime_format(desired_date.date))&(df['doctor_name'] == doctor_name) & (df['is_available'] == True), ['is_available','patient_to_attend']] = [False, id_number.id]
+        df.to_csv(f'availability.csv', index = False)
+
+        return "Successfully done"
+
+
 
 
 
