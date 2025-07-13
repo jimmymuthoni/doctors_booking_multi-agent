@@ -11,7 +11,7 @@ def check_availability_by_doctor(desired_date: Datemodel, doctor_name: Literal['
     Checking the database if we have availability for the specific doctor.
     The parameters shouls be mentioned by the user in the query.
     """
-    df = pd.read_csv("/home/brian/Documents/JIM/Doctor Appointment Multiagent/data/doctor_availability.csv")
+    df = pd.read_csv(r"../data/doctor_availability.csv")
     df['date_slot_time'] = df['date_slot'].apply(lambda input: input.split(' ')[-1])
     rows = list(df[(df['date_slot'].apply(lambda input: input.split(' ')[0]) == desired_date.date)&(df['doctor_name'] == doctor_name)&(df['is_available'] == True)]['date_slot_time'])
 
