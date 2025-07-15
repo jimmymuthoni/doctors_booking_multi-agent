@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: doctors_appointment_booking
+Version: 0.0.1
+Author: jimmy muthoni
+Author-email: jimmymuthoni26@gmail.com
+Requires-Python: >=3.10
+Requires-Dist: fastapi
+Requires-Dist: ipykernel
+Requires-Dist: pydantic
+Requires-Dist: pandas
+Requires-Dist: langchain_core
+Requires-Dist: langchain_groq
+Requires-Dist: python-dotenv
+Requires-Dist: langchain_openai
+Requires-Dist: langchain
+Requires-Dist: langgraph
+Requires-Dist: streamlit
+Requires-Dist: uvicorn
+Dynamic: author
+Dynamic: author-email
+Dynamic: requires-dist
+Dynamic: requires-python
