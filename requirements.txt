@@ -9,3 +9,6 @@ langchain_openai
 langchain
 langgraph
 streamlit
+uvicorn
+
+-e .
