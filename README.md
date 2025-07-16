@@ -1,6 +1,6 @@
 ### AI-Powered Hospital Agent System
 
-This project is an AI agent-based hospital assistant designed to streamline interactions such as doctor appointment booking, cancellations, rescheduling, and answering hospital-related FAQs. It consists of a **supervisor agent** that intelligently routes user queries to the appropriate sub-agent for execution.
+This project is an AI agent-based hospital assistant designed to streamline interactions such as doctor appointment booking according to spacialization (general_dentist, cosmetic_dentist, prosthodontist, pediatric_dentist,emergency_dentist,oral_surgeon,orthodontist), cancellations, rescheduling, and answering hospital-related FAQs. It consists of a **supervisor agent** that intelligently routes user queries to the appropriate sub-agent for execution.
 
 ---
 
@@ -36,7 +36,7 @@ The system is built with three main agents:
 ### Things that I'm currently working on:
 
 - Replace CSV storage with a **relational SQL database**.
-- Introduce **authentication and user-specific sessions**.
+- Introduce full stack healthcare stytem where agents will work the system database
 - Integrate **LLM-powered fallback reasoning** for complex user queries.
 - Add **email and WhatsApp notifications** for appointment confirmations and reminders.
 
